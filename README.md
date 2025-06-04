@@ -37,7 +37,7 @@ In this project, we will observe various network traffic to and from Azure Virtu
 
 <h3>Step 1: Connect to VM using RDP & Install Wireshark</h3>
 <p>
-<img width="850" alt="NSG2" src="https://github.com/user-attachments/assets/4feeae8a-e85d-4f16-8367-1aca1364efa6" />
+<img width="1512" alt="Screenshot 2025-06-04 at 4 11 25 PM" src="https://github.com/user-attachments/assets/d26ee90e-9263-492d-8357-be7ff40ee727" />
  
 <img width="850" alt="NSG3" src="https://github.com/user-attachments/assets/d458c1cd-87be-49e3-b9fd-f38c9cd51466" />
  </p>
