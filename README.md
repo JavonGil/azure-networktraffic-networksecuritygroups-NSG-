@@ -1,6 +1,5 @@
 <p align="center">
-<img width="850" alt="Windows_vmLinux_vm" src="https://github.com/user-attachments/assets/31f69526-8473-419c-97e7-4c41574d6edf" />
-
+<img src="https://i.imgur.com/Ua7udoS.png" alt="Traffic Examination"/>
 </p>
 
 <h1>Network Traffic and Network Security Group (NSG) Functions between Virtual Machines</h1>
