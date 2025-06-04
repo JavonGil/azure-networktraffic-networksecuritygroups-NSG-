@@ -42,11 +42,11 @@ In this project, we will observe various network traffic to and from Azure Virtu
 <img width="850" alt="NSG3" src="https://github.com/user-attachments/assets/d458c1cd-87be-49e3-b9fd-f38c9cd51466" />
  </p>
 <p>
-- Start by logging into your Azure account and go to the Virtual Machines section. From here, we will need to start the VMs (turn them on). As shown in Figure 1, Select both VMs by checking the box and then click the "Start" button. Azure will ask, "Do you want to start all the selected VMs?" Click "Yes". *While we are here, note the Public IP for the windows-vm. We will need this later.*
+- Start by logging into your Azure account and go to the Virtual Machines section. From here, we will need to start the VMs (turn them on). As shown in Figure 1, Select both VMs by checking the box and then click the "Start" button. Azure will ask, "Do you want to start all the selected VMs?" Click "Yes". *While we are here, note the Public IP for the windows-vm.*
 </p>
 
 <p>
-- After a couple minutes, the VMs should be up and running. Confirm this before moving on by checking the status as shown in Figure 2. You can minimize the Azure window for now. We will come back to it later. Move to your device for the next couple of steps. 
+- After a couple minutes, the VMs should be up and running. Confirm this before moving on by checking the status as shown in Figure 2. You can minimize the Azure window for now. We will come back to it later. 
 </p>
 <br />
 
@@ -62,7 +62,7 @@ In this project, we will observe various network traffic to and from Azure Virtu
 <img width="400" height="500" alt="NSG6" src="https://github.com/user-attachments/assets/535c8a2c-3b8a-4c20-9aca-a1615ac5c0ad" />
  </p>
 <p>
-- Enter the Public IP address for the windows-vm in "PC name". Good thing we noted the Public IP from Azure earlier. 😉 If you forgot to note it, simply go back to Azure and locate the Public IP on the main Virtual Machines page. (Refer to Figure 1.) Now for the Friendly name, I used "windows-vm" to keep it simple. Also, make sure "Reconnect if the connection is dropped" is selected. Click "Add".   
+- Enter the Public IP address for the windows-vm in "PC name". If you forgot to note it, simply go back to Azure and locate the Public IP on the main Virtual Machines page. (Refer to Figure 1.) Now for the Friendly name, I used "windows-vm" to keep it simple. Also, make sure "Reconnect if the connection is dropped" is selected. Click "Add".   
 </p>
 <br />
 
@@ -116,7 +116,7 @@ In this project, we will observe various network traffic to and from Azure Virtu
 </p>
 
 <p>
-- Now locate the Filter Bar at the top of the srceen, type in icmp and hit enter. Shown in figure 10. We will use the icmp filter to observe the network traffic as we ping the linux-vm we created in Azure. We need to locate the Private IP adrress of the linux-vm in order to ping it. So, back to Azure we go. Should be quick since we just minimized it earlier.
+- Now locate the Filter Bar at the top of the srceen, type in icmp and hit enter. Shown in figure 10. We will use the icmp filter to observe the network traffic as we ping the linux-vm we created in Azure. We need to locate the Private IP adrress of the linux-vm in order to ping it. So, back to Azure we go. 
 </p>
 <br />
 
@@ -149,7 +149,7 @@ In this project, we will observe various network traffic to and from Azure Virtu
 </p>
 
 <p>
-- Now in PowerShell, initiate a perpetual ping to the linux-vm with the command ping 10.0.0.5 -t. This command tells the windows-vm to ping the linux-vm non-stop. See Figure 14. Look at all that traffic! 🚗🚙🚗🚙🚗🚙🚗🚙🚗🚙🚗🚙🚗🚙🚗🚙🚗🚙🚗🚙🚗🚙🚗🚙
+- Now in PowerShell, initiate a perpetual ping to the linux-vm with the command ping 10.0.0.5 -t. This command tells the windows-vm to ping the linux-vm non-stop. See Figure 14.
 </p>
 <br />
 
@@ -177,7 +177,7 @@ In this project, we will observe various network traffic to and from Azure Virtu
 </p>
 
 <p>
-- Look at that! Our new Security Rule has been created and at the top of the list. Now we will go back to the windows-vm and see what happens. 👀
+- Our new Security Rule has been created and at the top of the list. Now we will go back to the windows-vm and see what happens. 
 </p>
 <br />
 
@@ -189,7 +189,7 @@ In this project, we will observe various network traffic to and from Azure Virtu
 
 <p>
 - Figure 17 shows when the ping request starts to time out in PowerShell because of the new rule we created in the Network Security Group. 
-- We can see in Figure 18 exactly when the rule took effect and started to deny the ping request from the windows-vm in Wireshark. It even has a timestamp!
+- We can see in Figure 18 exactly when the rule took effect and started to deny the ping request from the windows-vm in Wireshark.
 </p>
 <br />
 
@@ -200,11 +200,11 @@ In this project, we will observe various network traffic to and from Azure Virtu
 </p>
 
 <p>
-- Now, we will visit Azure real quick and delete the security rule we created. Check the box next to our rule and click the trash can to the right. Click "Yes" to confirm. With the rule deleted, the ping from the windows-vm to the linux-vm should start back up. Lets run back to the windows-vm and check it out. 🏃‍♂️
+- Now, we will visit Azure real quick and delete the security rule we created. Check the box next to our rule and click the trash can to the right. Click "Yes" to confirm. With the rule deleted, the ping from the windows-vm to the linux-vm should start back up.
 </p>
 
 <p>
-- In Figure 20, we can see via Wireshark and PowerShell that the ping started back up. Wireshark is showing the request and reply. PowerShell is showing Replies from 10.0.0.5 again. Let's Go! (To stop the perpetual ping, press Ctrl + C in PoweShell)😏
+- In Figure 20, we can see via Wireshark and PowerShell that the ping started back up. Wireshark is showing the request and reply. PowerShell is showing Replies from 10.0.0.5 again.
 </p>
 <br />
 
@@ -220,7 +220,7 @@ In this project, we will observe various network traffic to and from Azure Virtu
 </p>
 
 <p>
-- As you can see in Figure 22, we now have a secure and encrypted connection between the windows-vm and linux-vm. Look at those encrypted packets in Wireshark! 🔐 🚔
+- As you can see in Figure 22, we now have a secure and encrypted connection between the windows-vm and linux-vm. 
 </p>
 <br />
 
@@ -240,11 +240,11 @@ In this project, we will observe various network traffic to and from Azure Virtu
 </p>
 
 <p>
-- Type dhcp into the filter bar of Wireshark and start a new capture. In Powershell, type the command ipconfig /renew and press enter. Well that wasn't very exciting at all was it? Not much happened.😒 Lets direct our attention to Figure 25 for a moment because Figure 24 was a snooze fest. 😴
+- Type dhcp into the filter bar of Wireshark and start a new capture. In Powershell, type the command ipconfig /renew and press enter. Lets direct our attention to Figure 25 for a moment.
 </p>
 
 <p>
-- So, Figure 25. What is this all about? Well, we can't use the command ipconfig /release in PowerShell because we will loose our connection to the windows-vm. We came here to see some DHCP Traffic, so lets create some. Open the Notepad on the windows-vm. Type in, ipconfig /release and ipconfig /renew like you see in Figure 25. Now, save that in C:\ProgramData as dhcp.bat and click save. Now lets hop back over to PowerShell.
+- We came here to see some DHCP Traffic, so lets create some. Open the Notepad on the windows-vm. Type in, ipconfig /release and ipconfig /renew like you see in Figure 25. Now, save that in C:\ProgramData as dhcp.bat and click save. Now lets hop back over to PowerShell.
 </p>
 <br />
 <p>
@@ -258,7 +258,7 @@ In this project, we will observe various network traffic to and from Azure Virtu
 </p>
 
 <p>
-- You will see the ipconfig /release and the windows-vm will disconnect for a second, but it will fire back up pretty quick once the windows-vm renews the IP. Now take a look at Wireshark and PowerShell in Figure 27. We can see the actual proccess in action! DHCP traffic as promised.🤯 Big shout out to Josh Madakor for this little trick. 🫡
+- You will see the ipconfig /release and the windows-vm will disconnect for a second, but it will fire back up pretty quick once the windows-vm renews the IP. Now take a look at Wireshark and PowerShell in Figure 27. We can see the actual proccess in action! DHCP traffic as promised. shout out to Josh Madakor for the little trick. 🫡
 </p>
 <br />
 
@@ -274,7 +274,7 @@ In this project, we will observe various network traffic to and from Azure Virtu
 </p>
 
 <p>
-- What is this? 🤨 Even Wreck-it-Ralph looks confused. We can see that the IP, 130.211.198.204, is clearly related to Disney somehow. Notice the Disney logo by the IP address? Here are a couple things to consider. 1) We probably are not authorized to see what this IP really is. 2) DNS protocol translates human-readable domain names into machine-readable IP addresses. Very few websites can be accessed by typing the IP address directly into the address bar of a browser. Still, pretty cool stuff. 
+- We can see that the IP, 130.211.198.204, is clearly related to Disney somehow. Notice the Disney logo by the IP address? Here are a couple things to consider. 1) We probably are not authorized to see what this IP really is. 2) DNS protocol translates human-readable domain names into machine-readable IP addresses. Very few websites can be accessed by typing the IP address directly into the address bar of a browser. Still, pretty cool stuff. 
 </p>
 <br />
 
